@@ -1,0 +1,19 @@
+project_name: 'mini-dataset-processing'
+export_path: './outputs/{job_id}/my_cleaned_data.jsonl'
+work_dir: './outputs'
+
+np: 2
+
+dataset:
+  configs:
+    - type: local
+      path: 'laptop_data_text.jsonl'
+
+process:
+  - text_length_filter:
+      min_len: 10
+      max_len: 10000
+
+  - clean_links_mapper:
+
+  - document_deduplicator:
