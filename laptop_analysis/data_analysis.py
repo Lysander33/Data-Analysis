@@ -114,6 +114,8 @@ def classify_storage(storage_str: str) -> dict:
         return {"type": "Flash 闪存", "has_ssd": False, "has_hdd": False}
     if has_flash and has_hdd:
         return {"type": "混合", "has_ssd": False, "has_hdd": True}
+    if has_flash and has_ssd:
+        return {"type": "混合", "has_ssd": True, "has_hdd": False}
     if has_ssd:
         return {"type": "SSD 固态", "has_ssd": True, "has_hdd": False}
     if has_hdd:
