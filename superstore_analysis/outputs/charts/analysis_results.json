@@ -1,0 +1,77 @@
+{
+  "整体": {
+    "总销售额": 2297200.86,
+    "总利润": 286397.02,
+    "整体利润率%": 12.47,
+    "亏损订单占比%": 18.72
+  },
+  "品类利润排名": {
+    "Technology": 145454.95,
+    "Office Supplies": 122490.8,
+    "Furniture": 18451.27
+  },
+  "子品类Top5": {
+    "Copiers": 55617.82,
+    "Phones": 44515.73,
+    "Accessories": 41936.64,
+    "Paper": 34053.57,
+    "Binders": 30221.76
+  },
+  "子品类Bottom5": {
+    "Machines": 3384.76,
+    "Fasteners": 949.52,
+    "Supplies": -1189.1,
+    "Bookcases": -3472.56,
+    "Tables": -17725.48
+  },
+  "地区利润排名": {
+    "West": 108418.45,
+    "East": 91522.78,
+    "South": 46749.43,
+    "Central": 39706.36
+  },
+  "客户细分利润率%": {
+    "Consumer": 11.55,
+    "Corporate": 13.03,
+    "Home Office": 14.03
+  },
+  "折扣档位亏损率%": {
+    "无折扣": 0.0,
+    "低折扣 (1-20%)": 13.75,
+    "中折扣 (21-40%)": 90.22,
+    "高折扣 (>40%)": 100.0
+  },
+  "关注建议": [
+    "子品类【Copiers】总利润 $55,618，核心盈利来源",
+    "子品类【Phones】总利润 $44,516，核心盈利来源",
+    "子品类【Accessories】总利润 $41,937，核心盈利来源",
+    "地区【West】利润最高 ($108,418)，加大投入",
+    "客户群体【Home Office】利润率最高 (14.0%)，精准营销",
+    "产品【Canon imageCLASS 2200 Advanced Copier】(Copiers)利润 $25,200，明星单品",
+    "产品【Fellowes PB500 Electric Punch Plastic Comb Binding...】(Binders)利润 $7,753，明星单品",
+    "产品【Hewlett Packard LaserJet 3310 Copier】(Copiers)利润 $6,984，明星单品",
+    "产品【Canon PC1060 Personal Laser Copier】(Copiers)利润 $4,571，明星单品",
+    "产品【HP Designjet T520 Inkjet Large Format Printer - 24...】(Machines)利润 $4,095，明星单品",
+    "产品【Ativa V4110MDD Micro-Cut Shredder】(Machines)利润 $3,773，明星单品",
+    "产品【3D Systems Cube Printer, 2nd Generation, Magenta】(Machines)利润 $3,718，明星单品",
+    "产品【Plantronics Savi W720 Multi-Device Wireless Headse...】(Accessories)利润 $3,696，明星单品",
+    "产品【Ibico EPK-21 Electric Binding System】(Binders)利润 $3,345，明星单品",
+    "产品【Zebra ZM400 Thermal Label Printer】(Machines)利润 $3,344，明星单品"
+  ],
+  "风险提示": [
+    "子品类【Supplies】总利润 $-1,189，持续亏损需复盘",
+    "子品类【Bookcases】总利润 $-3,473，持续亏损需复盘",
+    "子品类【Tables】总利润 $-17,725，持续亏损需复盘",
+    "高折扣(>40%)订单亏损率 100.0%，严控高折产品审批",
+    "产品【Cubify CubeX 3D Printer Double Head Print】(Machines)亏损 $8,880，考虑下架或改定价",
+    "产品【Lexmark MX611dhe Monochrome Laser Printer】(Machines)亏损 $4,590，考虑下架或改定价",
+    "产品【Cubify CubeX 3D Printer Triple Head Print】(Machines)亏损 $3,840，考虑下架或改定价",
+    "产品【Chromcraft Bull-Nose Wood Oval Conference Tables &...】(Tables)亏损 $2,876，考虑下架或改定价",
+    "产品【Bush Advantage Collection Racetrack Conference Tab...】(Tables)亏损 $1,934，考虑下架或改定价",
+    "产品【GBC DocuBind P400 Electric Binding System】(Binders)亏损 $1,878，考虑下架或改定价",
+    "产品【Cisco TelePresence System EX90 Videoconferencing U...】(Machines)亏损 $1,811，考虑下架或改定价",
+    "产品【Martin Yale Chadless Opener Electric Letter Opener】(Supplies)亏损 $1,299，考虑下架或改定价",
+    "产品【Balt Solid Wood Round Tables】(Tables)亏损 $1,201，考虑下架或改定价",
+    "产品【BoxOffice By Design Rectangular and Half-Moon Meet...】(Tables)亏损 $1,148，考虑下架或改定价"
+  ]
+}
