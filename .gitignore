@@ -9,3 +9,4 @@ __pycache__/
 # 运行产物
 outputs/
 !superstore_analysis/outputs/
+superstore_analysis/outputs/charts/*.png
