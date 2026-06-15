@@ -6,7 +6,12 @@
 __pycache__/
 *.pyc
 
+# 数据文件
+news.csv
+
 # 运行产物
 outputs/
 !superstore_analysis/outputs/
 superstore_analysis/outputs/charts/*.png
+!news_analysis/outputs/
+news_analysis/outputs/charts/*.png
