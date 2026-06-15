@@ -10,6 +10,7 @@
 |------|----------|------|
 | [laptop_analysis/](./laptop_analysis/) | [Laptop Price Dataset](https://www.kaggle.com/datasets/ionaskel/laptop-prices) | 印度市场 1,274 款笔记本规格与价格分析 |
 | [superstore_analysis/](./superstore_analysis/) | [Superstore Sales Dataset](https://www.kaggle.com/datasets/vivek468/superstore-dataset-final) | 美国超市 9,994 笔订单销售与利润分析 |
+| [news_analysis/](./news_analysis/) | Fake/Real News Dataset | 45,757 条新闻真假文本特征对比分析 |
 
 ---
 
@@ -52,6 +53,26 @@
 - **打折不能提升销售额**：Discount 与 Sales 几乎零相关（Pearson r = -0.03）
 
 生成 11 张分析图表，完整分析见 [superstore_analysis/README.md](./superstore_analysis/README.md)。
+
+---
+
+## news_analysis 速览
+
+45,757 条新闻文本的真假对比分析，提取 19 个文本特征，量化真假新闻的语言学差异。
+
+| 指标 | 数值 |
+|------|------|
+| 样本量 | 45,757 条（真假各 50%） |
+| 真新闻来源 | 94.9% 含 Reuters 引用 |
+
+- **停用词比例**是最大效应量特征（d=+0.86）：假新闻 42.0% vs 真 37.6%
+- **每句词数差异巨大**：假新闻每句 138 词 vs 真新闻 18.5 词（d=+0.41），假新闻长句拼接无断句
+- **感叹号密度差 16 倍**（d=+0.39），问号 9 倍（d=+0.52）—— 假新闻情绪化标点泛滥
+- **全大写词 2.4 倍**（d=+0.40）：假新闻大量使用 BREAKING、SHOCKING 等标题党格式
+- **假新闻 69.3% 含图片引用**（"image via"、"screen capture"），真新闻仅 9.6%
+- **Reuters 引用几乎完美区分真假**：真 94.9% vs 假 1.3%
+
+生成 10 张分析图表，完整分析见 [news_analysis/README.md](./news_analysis/README.md)。
 
 ---
 
