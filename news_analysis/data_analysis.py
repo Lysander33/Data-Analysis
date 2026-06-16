@@ -178,12 +178,12 @@ def main():
     df["words_per_sentence"] = df["word_count"] / df["sentence_count"].replace(0, 1)
     df["exclamation_ratio"] = df["text"].str.count("!") / df["word_count"] * 100
     df["question_ratio"] = df["text"].str.count(r"\?") / df["word_count"] * 100
-    df["quote_ratio"] = (df["text"].str.count('"') + df["text"].str.count("'")) / df["text_len"] * 100
+    df["quote_ratio"] = (df["text"].str.count('"') + df["text"].str.count("'")) / df["word_count"] * 100
     df["allcaps_ratio"] = df["text"].str.findall(r"\b[A-Z]{3,}\b").str.len() / df["word_count"] * 100
     df["number_ratio"] = df["text"].str.count(r"\d") / df["text_len"] * 100
 
     df["has_reuters"] = df["text"].str.contains(r"\bReuters\b", case=False, na=False)
-    df["has_ap"] = df["text"].str.contains(r"\bAP\b", case=True, na=False)
+    df["has_ap"] = df["text"].str.contains(r"\bAP\b", case=False, na=False)
     df["has_video_ref"] = df["text"].str.contains(
         r"\b(?:VIDEO|WATCH|PHOTO|IMAGE)\b", case=False, na=False
     )
@@ -261,13 +261,13 @@ def main():
     print("  提取Top Bigrams...")
     f_bigrams = Counter()
     r_bigrams = Counter()
-    for _, row in fake["text"].sample(min(10000, len(fake))).items():
+    for _, row in fake["text"].sample(min(10000, len(fake)), random_state=42).items():
         words = [w.lower() for w in row.split() if len(w) > 1]
         for i in range(len(words) - 1):
             bg = f"{words[i]} {words[i+1]}"
             if not any(c in bg for c in ".,!?;:\"'()[]{}"):
                 f_bigrams[bg] += 1
-    for _, row in real["text"].sample(min(10000, len(real))).items():
+    for _, row in real["text"].sample(min(10000, len(real)), random_state=42).items():
         words = [w.lower() for w in row.split() if len(w) > 1]
         for i in range(len(words) - 1):
             bg = f"{words[i]} {words[i+1]}"
@@ -472,12 +472,12 @@ def main():
     # ── 06 情感词频率对比 ──
     em_counts_fake = Counter()
     em_counts_real = Counter()
-    for _, row in fake["text"].sample(min(15000, len(fake))).items():
+    for _, row in fake["text"].sample(min(15000, len(fake)), random_state=42).items():
         for w in row.split():
             wl = w.lower().strip(".,!?;:\"'()[]{}")
             if wl in EMOTIONAL_WORDS:
                 em_counts_fake[wl] += 1
-    for _, row in real["text"].sample(min(15000, len(real))).items():
+    for _, row in real["text"].sample(min(15000, len(real)), random_state=42).items():
         for w in row.split():
             wl = w.lower().strip(".,!?;:\"'()[]{}")
             if wl in EMOTIONAL_WORDS:
